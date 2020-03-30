@@ -6,23 +6,27 @@
 
     <title>To-Do List</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-    <link href="/assets/styles.css" rel="stylesheet" type ="text/css"/>
+
+  <link href="/assets/styles.css" rel="stylesheet" type ="text/css"/>
  
 </head>
 <body>   
 <h1>My to-do list</h1>
 <div id="todo-table">
-<form>
+<form method="POST">
 
  <input type="text" name="item" placeholder="Add new item..." required/> 
  <button type="Submit">Add item</button>
 </form>
 <ul>
-<& for( let i=0; i<todos.length;i++){ %>
-<li><%= todos[i].item %></li>
-<% } %> 
+<% for(let i=0; i<todos.length;i++) { %>
+<li><%=todos[i].item%></li>
+<% } %>
 </ul>
 </div>
+ 
 
 </body>
+    <script src="/assets/todo-list.js"></script>
+
 </html>
